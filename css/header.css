@@ -1,0 +1,162 @@
+* {
+    font-family: "Montserrat", "Helvetica", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.header{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px -2px 0px #EFF2F2;
+    padding: 0px 15px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header__container {
+    display: flex;
+    justify-content:space-between;
+    align-items:center; 
+    height: 76px;
+}
+
+.logo {
+    margin-right: 51px;
+}
+
+.header__nav {
+    display: flex;
+    justify-content:space-between;
+    flex-grow: 1;
+}
+
+
+.header__nav_link{
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+}
+
+.header__nav_link > li {
+    padding: 0px 15px;
+}
+
+.header__nav_link > li > a {
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
+    color: hsla(0, 0%, 20%, 1);
+    white-space: nowrap;
+}
+
+.link__dropdown:after {
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url(../images/svg/arrow-down.svg);
+    margin: 0 0 -2px 4px;
+}
+
+.header__button {
+    background-color: #E3F5F5;
+    border-radius: 4px;
+    border: none;
+    color: #03B2A5;
+    padding: 14px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.header__button:hover {
+    opacity: 0.7;
+}
+
+.header__button_burger {
+    background-image: url("../images/png/btn-burger.png");
+    width: 18px;
+    height: 18px;
+    display: none;
+}
+
+.header__button:hover, .header__link:hover {
+    cursor:pointer;
+    color: #03B2A5;
+}
+
+@media screen and (max-width: 1440px){
+
+    .container {
+        max-width: 960px;
+    }
+
+    .header__nav_link > li {
+        padding: 0px 8px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .container {
+        max-width: 728px;
+    }
+
+    .header__nav {
+        display: none;
+    }
+
+    .header__button {
+        display: none;
+    }
+
+    .header__button_burger {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 768px){
+
+    .container {
+        max-width: 100%;
+    }
+
+    .header__container{
+        height: 72px;
+    }
+
+    .header__nav {
+        display: none;
+    }
+
+    .header__button {
+        display: none;
+    }
+
+    .header__button_burger {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 414px){
+
+    .header__container {
+        height: 56px;
+    }
+
+    .header__nav {
+        display: none;
+    }
+
+    .header__button {
+        display: none;
+    }
+
+    .header__button_burger {
+        display: block;
+    }
+}
